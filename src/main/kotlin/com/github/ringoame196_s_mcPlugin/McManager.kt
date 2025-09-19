@@ -1,0 +1,17 @@
+package com.github.ringoame196_s_mcPlugin
+
+import org.bukkit.entity.Player
+
+object McManager {
+    fun getPlayerInfo(player: Player): PlayerInfo {
+        val location = player.location
+        return PlayerInfo(
+            player.name,
+            player.health,
+            location.world?.name,
+            location.x,
+            location.y,
+            location.z
+        )
+    }
+}
