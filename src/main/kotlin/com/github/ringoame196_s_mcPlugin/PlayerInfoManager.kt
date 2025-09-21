@@ -7,6 +7,7 @@ object PlayerInfoManager {
         val location = player.location
         return PlayerInfo(
             player.name,
+            player.uniqueId.toString(),
             player.health,
             location.world?.name,
             location.x,

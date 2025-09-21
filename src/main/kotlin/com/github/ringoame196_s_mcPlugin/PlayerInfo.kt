@@ -2,6 +2,7 @@ package com.github.ringoame196_s_mcPlugin
 
 data class PlayerInfo(
     val name: String?,
+    val uuid: String?,
     val health: Double?,
     val world: String?,
     val x: Double?,
@@ -11,6 +12,7 @@ data class PlayerInfo(
     fun toMap(): Map<String, *> {
         return mapOf(
             "name" to name,
+            "uuid" to uuid,
             "health" to health,
             "world" to world,
             "x" to x,
