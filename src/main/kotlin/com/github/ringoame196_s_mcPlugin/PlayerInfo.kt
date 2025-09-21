@@ -1,8 +1,5 @@
 package com.github.ringoame196_s_mcPlugin
 
-import kotlinx.serialization.Serializable
-
-@Serializable
 data class PlayerInfo(
     val name: String?,
     val health: Double?,
@@ -10,4 +7,15 @@ data class PlayerInfo(
     val x: Double?,
     val y: Double?,
     val z: Double?
-)
+) {
+    fun toMap(): Map<String, *> {
+        return mapOf(
+            "name" to name,
+            "health" to health,
+            "world" to world,
+            "x" to x,
+            "y" to y,
+            "z" to z
+        )
+    }
+}
