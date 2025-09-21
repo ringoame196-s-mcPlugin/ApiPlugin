@@ -14,4 +14,21 @@ object JsonManager {
         sb.append("}")
         return sb.toString()
     }
+
+    fun jsonString(dataList: List<Map<String, Any?>>): String {
+        val sb = StringBuilder("[")
+
+        dataList.forEachIndexed { i, data ->
+            sb.append("{")
+            data.entries.forEachIndexed { j, (key, value) ->
+                sb.append("\"$key\": \"$value\"")
+                if (j < data.size - 1) sb.append(", ")
+            }
+            sb.append("}")
+            if (i < dataList.size - 1) sb.append(", ")
+        }
+
+        sb.append("]")
+        return sb.toString()
+    }
 }
