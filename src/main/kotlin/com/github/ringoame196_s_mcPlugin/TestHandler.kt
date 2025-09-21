@@ -5,6 +5,6 @@ import com.sun.net.httpserver.HttpHandler
 
 class TestHandler : HttpHandler {
     override fun handle(exchange: HttpExchange) {
-		JsonResponder.respondJson(exchange, 200, mapOf("status" to "ok"))
+        JsonResponder.respondJson(exchange, 200, mapOf("status" to "ok"))
     }
 }
