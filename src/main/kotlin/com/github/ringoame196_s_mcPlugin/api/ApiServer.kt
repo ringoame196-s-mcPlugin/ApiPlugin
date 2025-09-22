@@ -18,6 +18,7 @@ object ApiServer {
         server?.createContext("/test", TestHandler())
         server?.createContext("/player", PlayerHandler())
         server?.createContext("/players", PlayersHandler())
+        server?.createContext("/plugin", PluginHandler())
 
         server?.executor = null // シンプルなスレッド処理
         server?.start()
