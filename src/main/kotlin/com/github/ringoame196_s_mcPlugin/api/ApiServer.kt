@@ -3,6 +3,7 @@ package com.github.ringoame196_s_mcPlugin.api
 import com.github.ringoame196_s_mcPlugin.handler.PlayerHandler
 import com.github.ringoame196_s_mcPlugin.handler.PlayersHandler
 import com.github.ringoame196_s_mcPlugin.handler.PluginHandler
+import com.github.ringoame196_s_mcPlugin.handler.PluginsHandler
 import com.github.ringoame196_s_mcPlugin.handler.TestHandler
 import com.sun.net.httpserver.HttpServer
 import org.bukkit.Bukkit
@@ -20,6 +21,7 @@ object ApiServer {
         server?.createContext("/player", PlayerHandler())
         server?.createContext("/players", PlayersHandler())
         server?.createContext("/plugin", PluginHandler())
+        server?.createContext("/plugins", PluginsHandler())
 
         server?.executor = null // シンプルなスレッド処理
         server?.start()
