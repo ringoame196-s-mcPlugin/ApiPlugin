@@ -1,5 +1,6 @@
-package com.github.ringoame196_s_mcPlugin.plugin
+package com.github.ringoame196_s_mcPlugin.service
 
+import com.github.ringoame196_s_mcPlugin.model.PluginInfo
 import org.bukkit.plugin.Plugin
 
 object PluginInfoManager {

@@ -1,6 +1,4 @@
-package com.github.ringoame196_s_mcPlugin.player
-
-import com.github.ringoame196_s_mcPlugin.Info
+package com.github.ringoame196_s_mcPlugin.model
 
 data class PlayerInfo(
     val name: String?,

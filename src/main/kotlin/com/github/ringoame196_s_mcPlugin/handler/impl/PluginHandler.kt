@@ -1,7 +1,8 @@
-package com.github.ringoame196_s_mcPlugin.handler
+package com.github.ringoame196_s_mcPlugin.handler.impl
 
-import com.github.ringoame196_s_mcPlugin.plugin.PluginInfo
-import com.github.ringoame196_s_mcPlugin.plugin.PluginInfoManager
+import com.github.ringoame196_s_mcPlugin.handler.base.BaseSearchInfoHandler
+import com.github.ringoame196_s_mcPlugin.model.PluginInfo
+import com.github.ringoame196_s_mcPlugin.service.PluginInfoManager
 import org.bukkit.Bukkit
 
 class PluginHandler : BaseSearchInfoHandler<PluginInfo>() {

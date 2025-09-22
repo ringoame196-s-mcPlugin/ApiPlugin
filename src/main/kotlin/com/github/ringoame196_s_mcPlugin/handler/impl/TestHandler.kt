@@ -1,4 +1,4 @@
-package com.github.ringoame196_s_mcPlugin.handler
+package com.github.ringoame196_s_mcPlugin.handler.impl
 
 import com.github.ringoame196_s_mcPlugin.api.JsonResponder
 import com.sun.net.httpserver.HttpExchange

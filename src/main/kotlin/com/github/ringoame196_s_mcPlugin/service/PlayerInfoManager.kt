@@ -1,5 +1,6 @@
-package com.github.ringoame196_s_mcPlugin.player
+package com.github.ringoame196_s_mcPlugin.service
 
+import com.github.ringoame196_s_mcPlugin.model.PlayerInfo
 import org.bukkit.entity.Player
 
 object PlayerInfoManager {

@@ -1,7 +1,7 @@
-package com.github.ringoame196_s_mcPlugin.handler
+package com.github.ringoame196_s_mcPlugin.handler.base
 
-import com.github.ringoame196_s_mcPlugin.HandlerManager
-import com.github.ringoame196_s_mcPlugin.Info
+import com.github.ringoame196_s_mcPlugin.util.HandlerManager
+import com.github.ringoame196_s_mcPlugin.model.Info
 import com.github.ringoame196_s_mcPlugin.api.JsonResponder
 import com.sun.net.httpserver.HttpExchange
 import com.sun.net.httpserver.HttpHandler

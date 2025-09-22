@@ -1,7 +1,8 @@
-package com.github.ringoame196_s_mcPlugin.handler
+package com.github.ringoame196_s_mcPlugin.handler.impl
 
-import com.github.ringoame196_s_mcPlugin.player.PlayerInfo
-import com.github.ringoame196_s_mcPlugin.player.PlayerInfoManager
+import com.github.ringoame196_s_mcPlugin.handler.base.BaseSearchInfoHandler
+import com.github.ringoame196_s_mcPlugin.model.PlayerInfo
+import com.github.ringoame196_s_mcPlugin.service.PlayerInfoManager
 import org.bukkit.Bukkit
 
 class PlayerHandler : BaseSearchInfoHandler<PlayerInfo>() {

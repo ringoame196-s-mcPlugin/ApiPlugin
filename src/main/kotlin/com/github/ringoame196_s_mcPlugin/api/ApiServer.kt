@@ -1,10 +1,10 @@
 package com.github.ringoame196_s_mcPlugin.api
 
-import com.github.ringoame196_s_mcPlugin.handler.PlayerHandler
-import com.github.ringoame196_s_mcPlugin.handler.PlayersHandler
-import com.github.ringoame196_s_mcPlugin.handler.PluginHandler
-import com.github.ringoame196_s_mcPlugin.handler.PluginsHandler
-import com.github.ringoame196_s_mcPlugin.handler.TestHandler
+import com.github.ringoame196_s_mcPlugin.handler.impl.PlayerHandler
+import com.github.ringoame196_s_mcPlugin.handler.impl.PlayersHandler
+import com.github.ringoame196_s_mcPlugin.handler.impl.PluginHandler
+import com.github.ringoame196_s_mcPlugin.handler.impl.PluginsHandler
+import com.github.ringoame196_s_mcPlugin.handler.impl.TestHandler
 import com.sun.net.httpserver.HttpServer
 import org.bukkit.Bukkit
 import java.net.InetSocketAddress
