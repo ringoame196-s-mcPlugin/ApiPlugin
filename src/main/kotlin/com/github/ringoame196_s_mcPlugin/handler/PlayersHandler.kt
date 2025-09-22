@@ -1,20 +1,12 @@
 package com.github.ringoame196_s_mcPlugin.handler
 
-import com.github.ringoame196_s_mcPlugin.api.JsonResponder
 import com.github.ringoame196_s_mcPlugin.player.PlayerInfoManager
-import com.sun.net.httpserver.HttpExchange
-import com.sun.net.httpserver.HttpHandler
 import org.bukkit.Bukkit
+import org.bukkit.entity.Player
 
-class PlayersHandler : HttpHandler {
-    override fun handle(exchange: HttpExchange?) {
-        exchange ?: return
-        val players = Bukkit.getOnlinePlayers()
-        val playerInfoList = mutableListOf<Map<String, *>>()
+class PlayersHandler : BaseListInfoHandler<Player>() {
+    override fun getTargets() = Bukkit.getOnlinePlayers()
 
-        for (player in players) {
-            playerInfoList.add(PlayerInfoManager.getPlayerInfo(player).toMap())
-        }
-        JsonResponder.respondJson(exchange, 200, playerInfoList)
-    }
+    override fun toMap(target: Player) =
+        PlayerInfoManager.getPlayerInfo(target).toMap()
 }
