@@ -1,5 +1,7 @@
-package com.github.ringoame196_s_mcPlugin
+package com.github.ringoame196_s_mcPlugin.handler
 
+import com.github.ringoame196_s_mcPlugin.player.PlayerInfoManager
+import com.github.ringoame196_s_mcPlugin.api.JsonResponder
 import com.sun.net.httpserver.HttpExchange
 import com.sun.net.httpserver.HttpHandler
 import org.bukkit.Bukkit

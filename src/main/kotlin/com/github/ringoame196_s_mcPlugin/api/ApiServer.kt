@@ -1,5 +1,8 @@
-package com.github.ringoame196_s_mcPlugin
+package com.github.ringoame196_s_mcPlugin.api
 
+import com.github.ringoame196_s_mcPlugin.handler.PlayerHandler
+import com.github.ringoame196_s_mcPlugin.handler.PlayersHandler
+import com.github.ringoame196_s_mcPlugin.handler.TestHandler
 import com.sun.net.httpserver.HttpServer
 import org.bukkit.Bukkit
 import java.net.InetSocketAddress
@@ -9,7 +12,7 @@ object ApiServer {
     private const val PORT = 8080
 
     fun startup() {
-        if (server != null) return
+        server ?: return
         server = HttpServer.create(InetSocketAddress(PORT), 0)
 
         server?.createContext("/test", TestHandler())

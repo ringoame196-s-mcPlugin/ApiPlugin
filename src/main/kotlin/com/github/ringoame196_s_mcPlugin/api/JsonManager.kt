@@ -1,4 +1,4 @@
-package com.github.ringoame196_s_mcPlugin
+package com.github.ringoame196_s_mcPlugin.api
 
 object JsonManager {
     fun jsonString(data: Map<String, *>): String {
