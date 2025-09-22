@@ -1,12 +1,13 @@
 package com.github.ringoame196_s_mcPlugin.handler.base
 
-import com.github.ringoame196_s_mcPlugin.util.HandlerManager
-import com.github.ringoame196_s_mcPlugin.model.Info
 import com.github.ringoame196_s_mcPlugin.api.JsonResponder
+import com.github.ringoame196_s_mcPlugin.model.Info
+import com.github.ringoame196_s_mcPlugin.util.HandlerManager
 import com.sun.net.httpserver.HttpExchange
 import com.sun.net.httpserver.HttpHandler
+import org.bukkit.plugin.Plugin
 
-abstract class BaseSearchInfoHandler<T : Info> : HttpHandler {
+abstract class BaseSearchInfoHandler<T : Info>(private val plugin: Plugin) : HttpHandler {
     abstract val notFoundMessage: String
     abstract fun findTarget(name: String): T?
 
@@ -26,5 +27,6 @@ abstract class BaseSearchInfoHandler<T : Info> : HttpHandler {
         }
 
         JsonResponder.respondJson(exchange, 200, target.toMap())
+        HandlerManager.sendAccessMessage(exchange, plugin)
     }
 }

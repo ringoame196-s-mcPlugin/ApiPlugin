@@ -4,13 +4,16 @@ import com.github.ringoame196_s_mcPlugin.api.ApiServer
 import org.bukkit.plugin.java.JavaPlugin
 
 class Main : JavaPlugin() {
+    private val plugin = this
+    private val apiServer = ApiServer(plugin)
+
     override fun onEnable() {
         super.onEnable()
-        ApiServer.startup()
+        apiServer.startup()
     }
 
     override fun onDisable() {
         super.onDisable()
-        ApiServer.stop()
+        apiServer.stop()
     }
 }

@@ -4,8 +4,9 @@ import com.github.ringoame196_s_mcPlugin.handler.base.BaseSearchInfoHandler
 import com.github.ringoame196_s_mcPlugin.model.PlayerInfo
 import com.github.ringoame196_s_mcPlugin.service.PlayerInfoManager
 import org.bukkit.Bukkit
+import org.bukkit.plugin.Plugin
 
-class PlayerHandler : BaseSearchInfoHandler<PlayerInfo>() {
+class PlayerHandler(plugin: Plugin) : BaseSearchInfoHandler<PlayerInfo>(plugin) {
     override val notFoundMessage: String
         get() = "Player not found"
 
