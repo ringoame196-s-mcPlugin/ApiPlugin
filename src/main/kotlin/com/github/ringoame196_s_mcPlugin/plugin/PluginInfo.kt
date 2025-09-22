@@ -1,12 +1,14 @@
 package com.github.ringoame196_s_mcPlugin.plugin
 
+import com.github.ringoame196_s_mcPlugin.Info
+
 data class PluginInfo(
     val name: String,
     val version: String,
     val apiVersion: String?,
     val enabled: Boolean
-) {
-    fun toMap(): Map<String, *> {
+) : Info {
+    override fun toMap(): Map<String, *> {
         return mapOf(
             "name" to name,
             "version" to version,
